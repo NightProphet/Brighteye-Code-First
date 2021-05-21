@@ -1,4 +1,5 @@
 # Brighteye Code First
+![Logo](logo.svg)
 
 ## Project design screenshots
 ![Screenshot](1.png)
