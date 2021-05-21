@@ -78,12 +78,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DataModel\BrighteyeContext.cs" />
+    <Compile Include="DataModel\Number.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
