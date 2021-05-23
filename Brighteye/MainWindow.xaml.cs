@@ -33,7 +33,7 @@ namespace Brighteye
         {
             using (BrighteyeContext context = new BrighteyeContext())
             {
-                Number number = new Number();
+                Generate number = new Generate();
 
                 int[] array = new int[10];
 
@@ -53,16 +53,16 @@ namespace Brighteye
 
                 for (int i = 0; i < array.Length; i++)
                 {
-                    number.Generated = array[i];
-                    context.Numbers.Add(number);
+                    number.Numbers = array[i];
+                    context.Generates.Add(number);
                     context.SaveChanges();
                 }
 
                 context.Configuration.LazyLoadingEnabled = false;
                 List<int> dbList = new List<int>();
-                foreach (Number n in context.Numbers)
+                foreach (Generate n in context.Generates)
                 {
-                    dbList.Add(n.Generated);
+                    dbList.Add(n.Numbers);
                     Generated.Text = string.Join("   ", dbList);
                 }
             }
@@ -70,7 +70,32 @@ namespace Brighteye
 
         private void Sort_Click(object sender, RoutedEventArgs e)
         {
+            using (BrighteyeContext context = new BrighteyeContext())
+            {
+                Sort number = new Sort();
 
+                context.Configuration.LazyLoadingEnabled = false;
+                List<int> sortedList = new List<int>();
+                foreach (Generate n in context.Generates)
+                {
+                    sortedList.Add(n.Numbers);
+                    sortedList.Sort();
+                }
+
+                for (int i = 0; i < 10; i++)
+                {
+                    number.Numbers = sortedList[i];
+                    context.Sorts.Add(number);
+                    context.SaveChanges();
+                }
+
+                List<int> dbList = new List<int>();
+                foreach (Sort n in context.Sorts)
+                {
+                    dbList.Add(n.Numbers);
+                    Sorted.Text = string.Join("   ", dbList);
+                }
+            }
         }
     }
 }

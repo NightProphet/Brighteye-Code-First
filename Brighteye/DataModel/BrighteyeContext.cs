@@ -10,7 +10,8 @@ namespace Brighteye.DataModel
             : base("name=BrighteyeContext")
         {
         }
-        
-        public DbSet<Number> Numbers { get; set; }
+
+        public DbSet<Generate> Generates { get; set; }
+        public DbSet<Sort> Sorts { get; set; }
     }
 }
