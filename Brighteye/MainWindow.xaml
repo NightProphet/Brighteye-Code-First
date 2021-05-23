@@ -34,12 +34,12 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         <Border CornerRadius="3" Background="#D2FAFA" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="9" Grid.RowSpan="2" >
-            <TextBlock x:Name="Generated" FontSize="28" FontFamily="Panton" Foreground="#FF00C8FA" TextAlignment="Center"  VerticalAlignment="Center" />
+            <TextBlock x:Name="Generated" FontSize="28" FontFamily="/Fonts/#Panton" Foreground="#FF00C8FA" TextAlignment="Center"  VerticalAlignment="Center" />
         </Border>
         <Border CornerRadius="3" Background="#D2FAFA" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="9" Grid.RowSpan="2" >
-            <TextBlock x:Name="Sorted" FontSize="28" FontFamily="Panton" Foreground="#FF00C8FA" TextAlignment="Center"  VerticalAlignment="Center" />
+            <TextBlock x:Name="Sorted" FontSize="28" FontFamily="/Fonts/#Panton" Foreground="#FF00C8FA" TextAlignment="Center"  VerticalAlignment="Center" />
         </Border>
-        <Button x:Name="Generate" Content="Generate" FontSize="18" FontFamily="Panton" FontWeight="Bold" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2" Foreground="White" Click="Generate_Click" Margin="0,5" Cursor="Hand" >
+        <Button x:Name="Generate" Content="Generate" FontSize="18" FontFamily="/Fonts/#Panton Bold" FontWeight="Bold" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="2" Foreground="White" Click="Generate_Click" Margin="0,5" Cursor="Hand" >
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#00C8FA" />
@@ -61,7 +61,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Button x:Name="Sort" Content="Sort" FontSize="18" FontFamily="Panton" FontWeight="Bold" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="4" Grid.RowSpan="2" Foreground="White" Click="Sort_Click"  Margin="0,5" Cursor="Hand">
+        <Button x:Name="Sort" Content="Sort" FontSize="18" FontFamily="/Fonts/#Panton Bold" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="4" Grid.RowSpan="2" Foreground="White" Click="Sort_Click"  Margin="0,5" Cursor="Hand">
             <Button.Style>
                 <Style TargetType="{x:Type Button}">
                     <Setter Property="Background" Value="#00DC3C" />
