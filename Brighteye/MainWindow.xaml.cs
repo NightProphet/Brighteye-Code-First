@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -51,6 +52,8 @@ namespace Brighteye
                     array[j] = temp;
                 }
 
+                context.Database.ExecuteSqlCommand("TRUNCATE TABLE [BrighteyeDb].[dbo].[Generates]");
+
                 for (int i = 0; i < array.Length; i++)
                 {
                     number.Numbers = array[i];
@@ -64,6 +67,7 @@ namespace Brighteye
                 {
                     dbList.Add(n.Numbers);
                     Generated.Text = string.Join("   ", dbList);
+                    Sorted.Text = "";
                 }
             }
         }
@@ -81,6 +85,8 @@ namespace Brighteye
                     sortedList.Add(n.Numbers);
                     sortedList.Sort();
                 }
+
+                context.Database.ExecuteSqlCommand("TRUNCATE TABLE [BrighteyeDb].[dbo].[Sorts]");
 
                 for (int i = 0; i < 10; i++)
                 {
